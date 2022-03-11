@@ -23,7 +23,7 @@ public class RegexUserReg {
 		if (Pattern.matches("[a-z]{2,}[A-Z]{1}", lN) == true)
 			System.out.println("Valid Input passed");
 		else
-			System.out.println("Invalid input passed");
+			System.out.println("Invalid input passed ");
 
 	}
 
