@@ -27,7 +27,7 @@ public class RegexUserReg {
 
 	}
 
-	/* User need to enter a valid email abc.xyz@bl.co.in */
+	/* enter a valid email abc.xyz@bl.co.in */
 	public static void Email() {
 		System.out.println("Enter Email id");
 		String email = scanner.nextLine();
@@ -38,12 +38,24 @@ public class RegexUserReg {
 
 	}
 
+	/*
+	 * entering Mobile Number format, country code follow by space and taking 10
+	 * digit number
+	 */
+	public static void PhoneNumber() {
+		System.out.println("Enter Mobile Number");
+		String mNumber = scanner.nextLine();
+		if (Pattern.matches("^[1-9]{2}\s{1}[1-9]{1}[0-9]{9}$", mNumber) == true)
+			System.out.println("Valid Input passed");
+		else
+			System.out.println("Invalid input passed");
+
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		System.out.println("Welcome to user registartion");
-		// FirstName();
-		// LastName();
-		Email();
+		PhoneNumber();
 	}
 }
