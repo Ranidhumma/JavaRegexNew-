@@ -27,11 +27,23 @@ public class RegexUserReg {
 
 	}
 
+	/* User need to enter a valid email abc.xyz@bl.co.in */
+	public static void Email() {
+		System.out.println("Enter Email id");
+		String email = scanner.nextLine();
+		if (Pattern.matches("^[a-z]+([.][a-z]+)*@bl+[.]co([.]in)*", email) == true)
+			System.out.println("Valid Input passed");
+		else
+			System.out.println("Invalid input passed");
+
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		System.out.println("Welcome to user registartion");
 		// FirstName();
-		LastName();
+		// LastName();
+		Email();
 	}
 }
