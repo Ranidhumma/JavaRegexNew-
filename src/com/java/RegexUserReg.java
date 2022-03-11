@@ -23,7 +23,7 @@ public class RegexUserReg {
 		if (Pattern.matches("[a-z]{2,}[A-Z]{1}", lN) == true)
 			System.out.println("Valid Input passed");
 		else
-			System.out.println("Invalid input passed");
+			System.out.println("Invalid input passed ");
 
 	}
 
@@ -35,7 +35,6 @@ public class RegexUserReg {
 			System.out.println("Valid Input passed");
 		else
 			System.out.println("Invalid input passed");
-
 	}
 
 	/*
@@ -49,7 +48,19 @@ public class RegexUserReg {
 			System.out.println("Valid Input passed");
 		else
 			System.out.println("Invalid input passed");
+	}
 
+	/*
+	 * entering Mobile Number format, country code follow by space and taking 10
+	 * digit number
+	 */
+	public static void PhoneNum() {
+		System.out.println("Enter Mobile Number");
+		String mNumber = scanner.nextLine();
+		if (Pattern.matches("^[1-9]{2}\s{1}[1-9]{1}[0-9]{9}$", mNumber) == true)
+			System.out.println("Valid Input passed");
+		else
+			System.out.println("Invalid input passed");
 	}
 
 	public static void main(String[] args) {
