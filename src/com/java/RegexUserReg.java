@@ -53,7 +53,7 @@ public class RegexUserReg {
 	public static void Password() {
 		System.out.println("Enter Password");
 		String pass = scanner.nextLine();
-		if (Pattern.matches("(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$%]).{8}", pass) == true)
+		if (Pattern.matches("^[A-Za-z0-9]{8,}$", pass) == true)
 			System.out.println("Valid Input passed");
 		else
 			System.out.println("Invalid input passed");
