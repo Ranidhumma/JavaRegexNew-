@@ -50,14 +50,10 @@ public class RegexUserReg {
 			System.out.println("Invalid input passed");
 	}
 
-	/*
-	 * entering Mobile Number format, country code follow by space and taking 10
-	 * digit number
-	 */
-	public static void PhoneNum() {
-		System.out.println("Enter Mobile Number");
-		String mNumber = scanner.nextLine();
-		if (Pattern.matches("^[1-9]{2}\s{1}[1-9]{1}[0-9]{9}$", mNumber) == true)
+	public static void Password() {
+		System.out.println("Enter Password");
+		String pass = scanner.nextLine();
+		if (Pattern.matches("(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$%]).{8}", pass) == true)
 			System.out.println("Valid Input passed");
 		else
 			System.out.println("Invalid input passed");
@@ -67,6 +63,6 @@ public class RegexUserReg {
 		// TODO Auto-generated method stub
 
 		System.out.println("Welcome to user registartion");
-		PhoneNumber();
+		Password();
 	}
 }
