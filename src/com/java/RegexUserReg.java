@@ -50,11 +50,11 @@ public class RegexUserReg {
 			System.out.println("Invalid input passed");
 	}
 
-	/* Should have at least 1 Upper Case */
+	/* Should have at least 1 numeric number */
 	public static void Password() {
 		System.out.println("Enter Password");
 		String pass = scanner.nextLine();
-		if (Pattern.matches("^(?=.*[A-Z])(?=.*[a-z]).{8}$", pass) == true)
+		if (Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8}$", pass) == true)
 			System.out.println("Valid Input passed");
 		else
 			System.out.println("Invalid input passed");
