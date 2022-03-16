@@ -64,6 +64,9 @@ public class RegexUserReg {
 		// TODO Auto-generated method stub
 
 		System.out.println("Welcome to user registartion");
-		Password();
+		// Password();
+		SampleEmail ab = new SampleEmail();
+		ab.testValidEmails();
+		ab.testNonValidEmails();
 	}
 }
